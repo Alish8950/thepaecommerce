@@ -1,0 +1,96 @@
+.grid-section {
+    padding: 9rem 0;
+  
+    .container {
+      max-width: 120rem;
+    }
+  
+    .grid {
+      gap: 3.2rem;
+    }
+  
+    figure {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s linear;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s linear;
+        cursor: pointer;
+      }
+  
+      &:hover::after {
+        width: 100%;
+      }
+  
+      &:hover img {
+        transform: scale(1.2);
+      }
+  
+      img {
+        max-width: 90%;
+        margin-top: 1.5rem;
+        height: 20rem;
+        transition: all 0.2s linear;
+      }
+    }
+  
+    .card {
+      background-color: #f8f8f8; // Example color, replace with your preference
+      border-radius: 1rem;
+  
+      .card-data {
+        padding: 0 1rem;
+      }
+  
+      .card-data-flex {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .card-data--price {
+        color: #9e9e9e; // Example color, replace with your preference
+      }
+  
+      h3 {
+        color: #333333; // Example color, replace with your preference
+        text-transform: capitalize;
+      }
+  
+      .btn {
+        margin: 2rem auto;
+        background-color: transparent;
+        border: 0.1rem solid #6254f3; // Example color, replace with your preference
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        &:hover {
+          background-color: #6254f3; // Example color, replace with your preference
+        }
+  
+        &:hover a {
+          color: #fff;
+        }
+  
+        a {
+          color: #6254f3; // Example color, replace with your preference
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,36 @@
+$bg-color: #f5f5f5; // Replace with your desired background color
+$btn-color: #5138ee; // Replace with your desired button color
+$btn-hover-bg: #fff; // Replace with your desired button hover background color
+$btn-hover-border: 1px solid $btn-color;
+
+.contact-wrapper {
+  padding: 9rem 0 5rem 0;
+  text-align: center;
+
+  .container {
+    margin-top: 6rem;
+
+    .contact-form {
+      max-width: 50rem;
+      margin: auto;
+
+      .contact-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        input[type="submit"] {
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: $btn-hover-bg;
+            border: $btn-hover-border;
+            color: $btn-color;
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+}

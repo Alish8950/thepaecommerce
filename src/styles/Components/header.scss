@@ -1,0 +1,18 @@
+$bg-color: #f7f7f7;
+$logo-height: 4rem;
+$padding-horizontal: 3rem;
+$container-height: 10rem;
+
+.header-container {
+    padding: 0 $padding-horizontal;
+    height: $container-height;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .logo {
+        height: $logo-height;
+    }
+}

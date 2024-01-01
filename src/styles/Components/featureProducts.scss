@@ -1,0 +1,111 @@
+$bg-color: #f5f5f5;                // Replace with your desired background color
+$overlay-color: rgba(0, 0, 0, 0.5); // Replace with your desired overlay color
+$text-color: #333;                  // Replace with your desired text color
+$helper-color: #999;                // Replace with your desired helper color
+$btn-bg-hover-color: rgb(98 84 243); // Replace with your desired button hover background color
+$btn-text-hover-color: #fff;         // Replace with your desired button hover text color
+
+.feature-product-section {
+  padding: 9rem 0;
+  background-color: $bg-color;
+
+  .container {
+    max-width: 120rem;
+  }
+
+  figure {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s linear;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: $overlay-color;
+      transition: all 0.2s linear;
+      cursor: pointer;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+
+    img {
+      max-width: 90%;
+      margin-top: 1.5rem;
+      height: 20rem;
+      transition: all 0.2s linear;
+    }
+
+    .caption {
+      position: absolute;
+      top: 15%;
+      right: 10%;
+      text-transform: uppercase;
+      background-color: $bg-color;
+      color: $helper-color;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 2rem;
+    }
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 1rem;
+
+    .card-data {
+      padding: 0 2rem;
+    }
+
+    .card-data-flex {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h3 {
+      color: $text-color;
+      text-transform: capitalize;
+    }
+
+    .card-data--price {
+      color: $helper-color;
+    }
+
+    .btn {
+      margin: 2rem auto;
+      background-color: transparent;
+      border: 0.1rem solid rgb(98 84 243);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: $btn-bg-hover-color;
+      }
+
+      &:hover a {
+        color: $btn-text-hover-color;
+      }
+
+      a {
+        color: rgb(98 84 243);
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
